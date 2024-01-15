@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://voqr2p8ese12"]
+
+[ext_resource type="Texture2D" uid="uid://dmy4n5iji7xnr" path="res://Sprites/pexels-fwstudio-129733.jpg" id="1_c3y2j"]
+[ext_resource type="Texture2D" uid="uid://3rkmfjirosys" path="res://Sprites/Food Items/Burger_&_Fries (16 x 16).png" id="2_q8tyw"]
+[ext_resource type="Script" path="res://NormalBread.gd" id="3_bmlqv"]
+
+[node name="Game" type="Node"]
+
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(576.75, 566.25)
+scale = Vector2(0.407662, 0.0563206)
+texture = ExtResource("1_c3y2j")
+
+[node name="NormalBread" type="Sprite2D" parent="."]
+position = Vector2(220, 582)
+scale = Vector2(5.40625, 5.28125)
+texture = ExtResource("2_q8tyw")
+region_enabled = true
+region_rect = Rect2(0, 0, 16.4053, 16)
+script = ExtResource("3_bmlqv")

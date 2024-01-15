@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7fxopdkruqri"]
+
+[ext_resource type="Texture2D" uid="uid://cd6uff3xvgpwv" path="res://Sprites/Food Items/Pancake_Stack (16 x 16).png" id="1_eq8l6"]
+[ext_resource type="Script" path="res://Scripts/SelectedBread.gd" id="2_ewavx"]
+
+[node name="Bread" type="Node2D"]
+
+[node name="SelectedBread" type="Sprite2D" parent="."]
+position = Vector2(128, 119)
+scale = Vector2(13.125, 13.125)
+texture = ExtResource("1_eq8l6")
+script = ExtResource("2_ewavx")
