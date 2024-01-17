@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5bplji0y7mhp"]
+
+[ext_resource type="Texture2D" uid="uid://gpwaymfunfat" path="res://Sprites/paes/integral_bread_1.png" id="1_p1ss6"]
+[ext_resource type="Texture2D" uid="uid://curw3b2swd2cv" path="res://Sprites/paes/integral_bread_2.png" id="2_t18uw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8e2u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p1ss6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t18uw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="integral bread" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v8e2u")
+autoplay = "default"
+frame_progress = 0.0640466

@@ -1,6 +1,7 @@
 extends Sprite2D
 
 @onready var bread = preload("res://bread.tscn")
+@onready var white_bread = preload("res://white_bread.tscn")
 
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
@@ -16,7 +17,7 @@ func _input(event):
 				check_bread.free()
 			
 			# Instancia o novo objeto da cena do pão
-			var current_bread = bread.instantiate()
+			var current_bread = white_bread.instantiate()
 			current_bread.name = "bread"
 			print("you choose bread: 1")
 			
