@@ -1,7 +1,7 @@
 extends Sprite2D
 
 var newTexture1 : Texture = preload("res://Sprites/paes/white_bread_1.png")
-var newTexture2 : Texture = preload("res://Sprites/paes/white_bread_2.png")
+var newTexture2 : Texture = preload("res://Sprites/paes/integral_bread_1.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
