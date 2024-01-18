@@ -22,4 +22,4 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_reyvh")
 autoplay = "default"
-frame_progress = 0.399711
+frame_progress = 0.0663693
