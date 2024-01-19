@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://voqr2p8ese12"]
+[gd_scene load_steps=17 format=3 uid="uid://voqr2p8ese12"]
 
 [ext_resource type="Texture2D" uid="uid://dmy4n5iji7xnr" path="res://Sprites/pexels-fwstudio-129733.jpg" id="1_c3y2j"]
 [ext_resource type="Script" path="res://Scripts/cena.gd" id="1_j6ys4"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" path="res://Scripts/IntegralBreadBag.gd" id="8_cxg2r"]
 [ext_resource type="Texture2D" uid="uid://dbebpnd51de58" path="res://Sprites/sacos/white_bag_2.png" id="8_xyvuc"]
 [ext_resource type="Script" path="res://Scripts/WhiteBreadBag.gd" id="9_itmok"]
+[ext_resource type="Texture2D" uid="uid://bmpy648sn5k6b" path="res://Sprites/Food Items/Bottled_Drinks (16 x 16).png" id="9_xb3cj"]
+[ext_resource type="Script" path="res://Scripts/PeanutButter.gd" id="10_7ddjn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j0fu5"]
 animations = [{
@@ -43,12 +45,26 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n35mm"]
 size = Vector2(488, 230)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ui1nw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_xb3cj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxudc"]
+size = Vector2(51.7172, 12.318)
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_j6ys4")
 
 [node name="Table" type="Sprite2D" parent="."]
-position = Vector2(990.062, 780.5)
-scale = Vector2(0.709084, 0.239053)
+position = Vector2(990.062, 820)
+scale = Vector2(0.709084, 0.211158)
 texture = ExtResource("1_c3y2j")
 
 [node name="IntegralBread" type="Sprite2D" parent="."]
@@ -83,3 +99,15 @@ script = ExtResource("8_cxg2r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IntegralBreadBag/Area2D"]
 shape = SubResource("RectangleShape2D_n35mm")
+
+[node name="PeanutButter" type="AnimatedSprite2D" parent="."]
+position = Vector2(903, 697)
+scale = Vector2(4.64063, 7.46874)
+sprite_frames = SubResource("SpriteFrames_ui1nw")
+
+[node name="Area2D" type="Area2D" parent="PeanutButter"]
+script = ExtResource("10_7ddjn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PeanutButter/Area2D"]
+position = Vector2(0.646439, 1.33896)
+shape = SubResource("RectangleShape2D_oxudc")
