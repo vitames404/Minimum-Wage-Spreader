@@ -26,7 +26,7 @@ func _input_event(viewport, event, shape_idx):
 				print("you choose bread: 1")
 				
 				# Define a posição global do objeto com base na posição do mouse
-				current_bread.global_position =  Vector2(800,300)
+				current_bread.global_position =  Vector2(1280,540)
 				
 				# Adiciona o novo objeto como filho da cena principal
 				main_scene.add_child(current_bread)

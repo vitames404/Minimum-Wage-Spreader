@@ -1,13 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://voqr2p8ese12"]
+[gd_scene load_steps=19 format=3 uid="uid://voqr2p8ese12"]
 
 [ext_resource type="Texture2D" uid="uid://dmy4n5iji7xnr" path="res://Sprites/pexels-fwstudio-129733.jpg" id="1_c3y2j"]
 [ext_resource type="Script" path="res://Scripts/cena.gd" id="1_j6ys4"]
 [ext_resource type="Texture2D" uid="uid://1106bo7kb4cy" path="res://Sprites/Food Items/Cake_Slices (16 x 16).png" id="5_a2ilr"]
 [ext_resource type="Script" path="res://Scripts/IntegralBread.gd" id="6_jht1q"]
 [ext_resource type="Texture2D" uid="uid://d12luwmt6nq6y" path="res://Sprites/sacos/white_bag_1.png" id="7_3cblg"]
+[ext_resource type="Texture2D" uid="uid://dne717io275n4" path="res://Sprites/sacos/integral_bag_1.png" id="8_65tvh"]
 [ext_resource type="Script" path="res://Scripts/IntegralBreadBag.gd" id="8_cxg2r"]
 [ext_resource type="Texture2D" uid="uid://dbebpnd51de58" path="res://Sprites/sacos/white_bag_2.png" id="8_xyvuc"]
 [ext_resource type="Script" path="res://Scripts/WhiteBreadBag.gd" id="9_itmok"]
+[ext_resource type="Texture2D" uid="uid://dpq3ea30xhk5n" path="res://Sprites/sacos/integral_bag_2.png" id="9_uexfp"]
 [ext_resource type="Texture2D" uid="uid://bmpy648sn5k6b" path="res://Sprites/Food Items/Bottled_Drinks (16 x 16).png" id="9_xb3cj"]
 [ext_resource type="Script" path="res://Scripts/PeanutButter.gd" id="10_7ddjn"]
 
@@ -32,10 +34,10 @@ size = Vector2(484.5, 220)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_3cblg")
+"texture": ExtResource("8_65tvh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_xyvuc")
+"texture": ExtResource("9_uexfp")
 }],
 "loop": true,
 "name": &"default",
@@ -68,6 +70,7 @@ scale = Vector2(0.709084, 0.211158)
 texture = ExtResource("1_c3y2j")
 
 [node name="IntegralBread" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(160, 594)
 scale = Vector2(5.625, 5.625)
 texture = ExtResource("5_a2ilr")
@@ -76,7 +79,7 @@ region_rect = Rect2(16, 0, 16, 16)
 script = ExtResource("6_jht1q")
 
 [node name="WhiteBreadBag" type="AnimatedSprite2D" parent="."]
-position = Vector2(279, 937)
+position = Vector2(235.5, 940)
 sprite_frames = SubResource("SpriteFrames_j0fu5")
 autoplay = "default"
 frame_progress = 0.129239
@@ -90,7 +93,7 @@ position = Vector2(242, 987)
 shape = SubResource("RectangleShape2D_gakfr")
 
 [node name="IntegralBreadBag" type="AnimatedSprite2D" parent="."]
-position = Vector2(280, 678)
+position = Vector2(236.5, 681)
 sprite_frames = SubResource("SpriteFrames_y43bw")
 autoplay = "default"
 
