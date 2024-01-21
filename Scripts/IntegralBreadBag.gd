@@ -1,7 +1,6 @@
 extends Area2D
 
 @onready var bread = preload("res://bread.tscn")
-@onready var integral_bread = preload("res://integral_bread.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,12 +20,12 @@ func _input_event(viewport, event, shape_idx):
 					check_bread.free()
 				
 				# Instancia o novo objeto da cena do pão
-				var current_bread = integral_bread.instantiate()
+				var current_bread = bread.instantiate()
 				current_bread.name = "bread"
 				print("you choose bread: 1")
 				
 				# Define a posição global do objeto com base na posição do mouse
-				current_bread.global_position =  Vector2(1280,540)
+				current_bread.global_position =  Vector2(1280,240)
 				
 				# Adiciona o novo objeto como filho da cena principal
 				main_scene.add_child(current_bread)

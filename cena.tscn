@@ -104,7 +104,7 @@ script = ExtResource("8_cxg2r")
 shape = SubResource("RectangleShape2D_n35mm")
 
 [node name="PeanutButter" type="AnimatedSprite2D" parent="."]
-position = Vector2(903, 697)
+position = Vector2(811, 924)
 scale = Vector2(4.64063, 7.46874)
 sprite_frames = SubResource("SpriteFrames_ui1nw")
 

@@ -1,7 +1,6 @@
 extends Sprite2D
 
 @onready var bread = preload("res://bread.tscn")
-@onready var integral_bread = preload("res://integral_bread.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,7 +20,7 @@ func _input_event(viewport, event, shape_idx):
 				check_bread.free()
 			
 			# Instancia o novo objeto da cena do pão
-			var current_bread = integral_bread.instantiate()
+			var current_bread = bread.instantiate()
 			current_bread.name = "bread"
 			print("you choose bread: 2")
 			

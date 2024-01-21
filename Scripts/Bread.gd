@@ -1,15 +1,39 @@
-extends Sprite2D
+extends Area2D
 
-var newTexture1 : Texture = preload("res://Sprites/paes/white_bread_1.png")
-var newTexture2 : Texture = preload("res://Sprites/paes/integral_bread_1.png")
+var drawing_points = []	
+var drawing = false
+var mouse_inside = false
 
-# Called when the node enters the scene tree for the first time.
+var shape_size
+
 func _ready():
-	if(Global.whatBread == 1):
-		set_sprite_texture(newTexture1)
-	else:
-		set_sprite_texture(newTexture2)
+	var bread = get_tree().get_root().get_child(0).get_node("Bread")
+	
+func _draw():
+	for point in drawing_points:
+		draw_rect(point, Color.GREEN, 1.0)
 
-func set_sprite_texture(texture: Texture) -> void:
-	# Set the sprite's texture
-	self.texture = texture
+func _input(event):
+	if event is InputEventMouseButton and mouse_inside:
+		var local_pos = to_local(event.position)
+		if mouse_inside:
+			if event.pressed:
+				drawing = true
+				if local_pos not in drawing_points:
+					drawing_points.append(Rect2(local_pos.x, local_pos.y, 30, 30))
+			elif event.button_index == MOUSE_BUTTON_LEFT:
+				drawing = false
+
+func _process(delta):
+	if drawing:
+		var local_pos = to_local(get_viewport().get_mouse_position())
+		if local_pos not in drawing_points:
+			drawing_points.append(Rect2(local_pos.x, local_pos.y, 30, 30)) # 10, 10 é o tamanho do desenho
+		queue_redraw()
+
+func _on_mouse_entered():
+	mouse_inside = true
+
+func _on_mouse_exited():
+	mouse_inside = false
+	drawing = false
