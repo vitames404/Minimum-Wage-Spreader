@@ -1,9 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://voqr2p8ese12"]
+[gd_scene load_steps=17 format=3 uid="uid://voqr2p8ese12"]
 
 [ext_resource type="Texture2D" uid="uid://dmy4n5iji7xnr" path="res://Sprites/pexels-fwstudio-129733.jpg" id="1_c3y2j"]
 [ext_resource type="Script" path="res://Scripts/cena.gd" id="1_j6ys4"]
-[ext_resource type="Texture2D" uid="uid://1106bo7kb4cy" path="res://Sprites/Food Items/Cake_Slices (16 x 16).png" id="5_a2ilr"]
-[ext_resource type="Script" path="res://Scripts/IntegralBread.gd" id="6_jht1q"]
 [ext_resource type="Texture2D" uid="uid://d12luwmt6nq6y" path="res://Sprites/sacos/white_bag_1.png" id="7_3cblg"]
 [ext_resource type="Texture2D" uid="uid://dne717io275n4" path="res://Sprites/sacos/integral_bag_1.png" id="8_65tvh"]
 [ext_resource type="Script" path="res://Scripts/IntegralBreadBag.gd" id="8_cxg2r"]
@@ -68,15 +66,6 @@ script = ExtResource("1_j6ys4")
 position = Vector2(990.062, 820)
 scale = Vector2(0.709084, 0.211158)
 texture = ExtResource("1_c3y2j")
-
-[node name="IntegralBread" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(160, 594)
-scale = Vector2(5.625, 5.625)
-texture = ExtResource("5_a2ilr")
-region_enabled = true
-region_rect = Rect2(16, 0, 16, 16)
-script = ExtResource("6_jht1q")
 
 [node name="WhiteBreadBag" type="AnimatedSprite2D" parent="."]
 position = Vector2(235.5, 940)
