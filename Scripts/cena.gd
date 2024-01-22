@@ -1,6 +1,11 @@
 extends Node2D
 
 var whatBread
+var whatColor
+var drawingPoints = []
+
+var peanutButterBreadCord = []
+var peanutButterBreadColor = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
