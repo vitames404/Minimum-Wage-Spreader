@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cq84fu0ql5i4o"
+=======
+uid="uid://b415jf1qp6awe"
+>>>>>>> 255c9ebb16f143383567a335e85a8409050c3de7
 path="res://.godot/imported/morango1.png-abfe9cbf8fa7beac5c3e63e3ccf10629.ctex"
 metadata={
 "vram_texture": false
