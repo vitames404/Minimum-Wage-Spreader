@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://voqr2p8ese12"]
+[gd_scene load_steps=45 format=3 uid="uid://voqr2p8ese12"]
 
 [ext_resource type="Script" path="res://Scripts/cena.gd" id="1_j6ys4"]
 [ext_resource type="Texture2D" uid="uid://b5w8kbdqrie3f" path="res://Sprites/mesa/mesa1.png" id="2_8u7ui"]
@@ -22,11 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://dpmdehf04nkby" path="res://Sprites/butter/butter1.png" id="18_dee7n"]
 [ext_resource type="Texture2D" uid="uid://drhf8btg6djxt" path="res://Sprites/butter/butter2.png" id="19_ok5xy"]
 [ext_resource type="Texture2D" uid="uid://ld2n15m5c3jh" path="res://Sprites/ketchup/ketchup1.png" id="21_cr0q4"]
-[ext_resource type="Texture2D" uid="uid://bv8tps6sxa6er" path="res://Sprites/Mini UI/Health_Indicator_White_Outline (8 x 8).png" id="21_qfu8a"]
 [ext_resource type="Texture2D" uid="uid://cmk0p4orajirj" path="res://Sprites/ketchup/ketchup2.png" id="22_aklom"]
 [ext_resource type="Script" path="res://ketchup.gd" id="23_3bytc"]
 [ext_resource type="Texture2D" uid="uid://hieyxvqtwisk" path="res://Sprites/botao/botao1.png" id="25_oj4tu"]
 [ext_resource type="Texture2D" uid="uid://c0c8k6cgllfd5" path="res://Sprites/botao/botao2.png" id="26_acb10"]
+[ext_resource type="Script" path="res://Scripts/SubmitButton.gd" id="27_tkgin"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2guij"]
 animations = [{
@@ -161,20 +161,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g87lb"]
 size = Vector2(264, 152)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4v1u1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("21_qfu8a")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjete"]
-size = Vector2(17.3134, 7.16418)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_kt14x"]
 animations = [{
 "frames": [{
@@ -188,6 +174,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jk301"]
+size = Vector2(242, 213)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_j6ys4")
@@ -208,7 +197,6 @@ position = Vector2(-244, -985)
 script = ExtResource("9_itmok")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteBreadBag/Area2D"]
-visible = false
 position = Vector2(242, 987)
 shape = SubResource("RectangleShape2D_gakfr")
 
@@ -221,8 +209,8 @@ autoplay = "default"
 script = ExtResource("8_cxg2r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IntegralBreadBag/Area2D"]
-visible = false
 shape = SubResource("RectangleShape2D_n35mm")
+debug_color = Color(0, 0.6, 0.709804, 0.419608)
 
 [node name="PeanutButter" type="AnimatedSprite2D" parent="."]
 position = Vector2(824, 957)
@@ -235,7 +223,6 @@ autoplay = "new_animation"
 script = ExtResource("10_7ddjn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PeanutButter/Area2D"]
-visible = false
 position = Vector2(-0.771179, -0.77124)
 shape = SubResource("RectangleShape2D_2k40u")
 
@@ -293,19 +280,15 @@ visible = false
 position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_g87lb")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1882, 63)
-scale = Vector2(16.75, 16.75)
-sprite_frames = SubResource("SpriteFrames_4v1u1")
-
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
-position = Vector2(0.955223, 0.656717)
-shape = SubResource("RectangleShape2D_sjete")
-
 [node name="botao" type="AnimatedSprite2D" parent="."]
 position = Vector2(1783, 954)
 sprite_frames = SubResource("SpriteFrames_kt14x")
 autoplay = "default"
 frame_progress = 0.273394
+
+[node name="Area2D" type="Area2D" parent="botao"]
+script = ExtResource("27_tkgin")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botao/Area2D"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_jk301")

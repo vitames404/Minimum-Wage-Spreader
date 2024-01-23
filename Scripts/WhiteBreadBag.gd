@@ -31,6 +31,3 @@ func _input_event(viewport, event, shape_idx):
 				main_scene.add_child(current_bread)
 				
 				Global.drawingPoints.clear()
-			
-			
-	

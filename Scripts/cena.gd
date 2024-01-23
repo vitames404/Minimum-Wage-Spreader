@@ -6,7 +6,26 @@ var whatColor
 var sprite : Sprite2D
 var drawn_texture : ImageTexture
 
+var Bread = []
+
 var drawingPoints = []
+
+#SANDY.BROWN = 1
+#MEDIUM_VIOLET_RED = 2
+
+var pao1 = [[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1]]
+			
+var pao2 = [[1, 2, 3, 4, 5, 6],
+			[4, 5, 6, 1, 8, 7],
+			[2, 2, 2, 2, 2, 2],
+			[2, 2, 2, 2, 2, 2],
+			[2, 2, 2, 2, 2, 2],
+			[2, 2, 2, 2, 2, 2]]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
