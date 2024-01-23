@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://cippn3rde3jcv"
+=======
+uid="uid://bdvpy60ggyikd"
+>>>>>>> Stashed changes
 path="res://.godot/imported/morango2.png-6068663ec897aea93cd482ca23f2755e.ctex"
 metadata={
 "vram_texture": false
