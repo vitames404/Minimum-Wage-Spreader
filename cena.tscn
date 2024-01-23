@@ -276,7 +276,6 @@ frame_progress = 0.13134
 script = ExtResource("23_3bytc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ketchup/Area2D"]
-visible = false
 position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_g87lb")
 

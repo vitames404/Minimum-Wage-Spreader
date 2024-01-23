@@ -14,6 +14,9 @@ func check_win():
 				if(point["color"] == 1):
 					if(drawnPoint["color"] == Color.SANDY_BROWN):
 						point["completed"] = true
+				if(point["color"] == 2):
+					if(drawnPoint["color"] == Color.MEDIUM_VIOLET_RED):
+						point["completed"] = true	
 	
 	var ganhou = true
 	for point in Global.Bread:
