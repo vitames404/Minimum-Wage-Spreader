@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/BreadTextureChanger.gd" id="2_wclgu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7fg32"]
-size = Vector2(561.614, 569.721)
+size = Vector2(384.46, 463.838)
 
 [node name="Bread" type="Node2D"]
 
@@ -19,7 +19,7 @@ script = ExtResource("2_wclgu")
 script = ExtResource("2_ewavx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-position = Vector2(0.745509, -2.22085)
+position = Vector2(1.35287, 15.415)
 shape = SubResource("RectangleShape2D_7fg32")
 
 [connection signal="mouse_entered" from="Sprite2D/Area2D" to="Sprite2D/Area2D" method="_on_mouse_entered"]

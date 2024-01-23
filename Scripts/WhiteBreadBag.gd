@@ -29,6 +29,8 @@ func _input_event(viewport, event, shape_idx):
 				
 				# Adiciona o novo objeto como filho da cena principal
 				main_scene.add_child(current_bread)
+				
+				Global.drawingPoints.clear()
 			
 			
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkdbx4qkdw7wj"
-path="res://.godot/imported/morango1.png-abfe9cbf8fa7beac5c3e63e3ccf10629.ctex"
+uid="uid://bvas4pr5jpuo3"
+path="res://.godot/imported/mayo2.png-db7791f85eb5c01035fdab1499dee867.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/morango/morango1.png"
-dest_files=["res://.godot/imported/morango1.png-abfe9cbf8fa7beac5c3e63e3ccf10629.ctex"]
+source_file="res://Sprites/mayo/mayo2.png"
+dest_files=["res://.godot/imported/mayo2.png-db7791f85eb5c01035fdab1499dee867.ctex"]
 
 [params]
 

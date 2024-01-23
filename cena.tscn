@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://voqr2p8ese12"]
+[gd_scene load_steps=36 format=3 uid="uid://voqr2p8ese12"]
 
 [ext_resource type="Texture2D" uid="uid://dmy4n5iji7xnr" path="res://Sprites/pexels-fwstudio-129733.jpg" id="1_c3y2j"]
 [ext_resource type="Script" path="res://Scripts/cena.gd" id="1_j6ys4"]
@@ -6,10 +6,21 @@
 [ext_resource type="Texture2D" uid="uid://dne717io275n4" path="res://Sprites/sacos/integral_bag_1.png" id="8_65tvh"]
 [ext_resource type="Script" path="res://Scripts/IntegralBreadBag.gd" id="8_cxg2r"]
 [ext_resource type="Texture2D" uid="uid://dbebpnd51de58" path="res://Sprites/sacos/white_bag_2.png" id="8_xyvuc"]
+[ext_resource type="Texture2D" uid="uid://bc4ofrrvtj78g" path="res://Sprites/peanutbutter/peanutbutter1.png" id="9_iel64"]
 [ext_resource type="Script" path="res://Scripts/WhiteBreadBag.gd" id="9_itmok"]
 [ext_resource type="Texture2D" uid="uid://dpq3ea30xhk5n" path="res://Sprites/sacos/integral_bag_2.png" id="9_uexfp"]
-[ext_resource type="Texture2D" uid="uid://bmpy648sn5k6b" path="res://Sprites/Food Items/Bottled_Drinks (16 x 16).png" id="9_xb3cj"]
 [ext_resource type="Script" path="res://Scripts/PeanutButter.gd" id="10_7ddjn"]
+[ext_resource type="Texture2D" uid="uid://btq2jfdqd4ai1" path="res://Sprites/peanutbutter/peanutbutter2.png" id="10_c46yn"]
+[ext_resource type="Texture2D" uid="uid://bkdbx4qkdw7wj" path="res://Sprites/morango/morango1.png" id="12_8s0qp"]
+[ext_resource type="Texture2D" uid="uid://cippn3rde3jcv" path="res://Sprites/morango/morango2.png" id="13_ewt6i"]
+[ext_resource type="Script" path="res://Scripts/Morango.gd" id="14_sqgx5"]
+[ext_resource type="Texture2D" uid="uid://uqbvrforuig0" path="res://Sprites/mayo/mayo1.png" id="15_3e8sy"]
+[ext_resource type="Script" path="res://Scripts/Mayo.gd" id="15_bb7q8"]
+[ext_resource type="Script" path="res://Scripts/Butter.gd" id="16_7gia3"]
+[ext_resource type="Texture2D" uid="uid://bvas4pr5jpuo3" path="res://Sprites/mayo/mayo2.png" id="16_rewev"]
+[ext_resource type="Texture2D" uid="uid://bx6vh431rvwr5" path="res://Sprites/butter/butter1.png" id="18_dee7n"]
+[ext_resource type="Texture2D" uid="uid://5x8g0rhpdgir" path="res://Sprites/butter/butter2.png" id="19_ok5xy"]
+[ext_resource type="Texture2D" uid="uid://bv8tps6sxa6er" path="res://Sprites/Mini UI/Health_Indicator_White_Outline (8 x 8).png" id="21_qfu8a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j0fu5"]
 animations = [{
@@ -45,19 +56,87 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n35mm"]
 size = Vector2(488, 230)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ui1nw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_whxjy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_xb3cj")
+"texture": ExtResource("9_iel64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c46yn")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2k40u"]
+size = Vector2(174.288, 205.136)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_khvw8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_8s0qp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ewt6i")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxudc"]
-size = Vector2(51.7172, 12.318)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30dho"]
+size = Vector2(221, 188)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxdu5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_3e8sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rewev")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bhvv"]
+size = Vector2(169, 234)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2qtjw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_dee7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ok5xy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7flq2"]
+size = Vector2(262, 242)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4v1u1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_qfu8a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjete"]
+size = Vector2(17.3134, 7.16418)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_j6ys4")
@@ -93,13 +172,62 @@ script = ExtResource("8_cxg2r")
 shape = SubResource("RectangleShape2D_n35mm")
 
 [node name="PeanutButter" type="AnimatedSprite2D" parent="."]
-position = Vector2(811, 924)
-scale = Vector2(4.64063, 7.46874)
-sprite_frames = SubResource("SpriteFrames_ui1nw")
+position = Vector2(653, 930)
+scale = Vector2(0.923077, 0.923077)
+sprite_frames = SubResource("SpriteFrames_whxjy")
+animation = &"new_animation"
+autoplay = "new_animation"
 
 [node name="Area2D" type="Area2D" parent="PeanutButter"]
 script = ExtResource("10_7ddjn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PeanutButter/Area2D"]
-position = Vector2(0.646439, 1.33896)
-shape = SubResource("RectangleShape2D_oxudc")
+position = Vector2(-0.771179, -0.77124)
+shape = SubResource("RectangleShape2D_2k40u")
+
+[node name="Morango" type="AnimatedSprite2D" parent="."]
+position = Vector2(877, 954)
+sprite_frames = SubResource("SpriteFrames_khvw8")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Morango"]
+script = ExtResource("14_sqgx5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Morango/Area2D"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_30dho")
+
+[node name="Mayo" type="AnimatedSprite2D" parent="."]
+position = Vector2(1101, 932)
+sprite_frames = SubResource("SpriteFrames_dxdu5")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Mayo"]
+script = ExtResource("15_bb7q8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mayo/Area2D"]
+position = Vector2(1.5, -4)
+shape = SubResource("RectangleShape2D_2bhvv")
+
+[node name="Butter" type="AnimatedSprite2D" parent="."]
+position = Vector2(1366, 928)
+sprite_frames = SubResource("SpriteFrames_2qtjw")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Butter"]
+script = ExtResource("16_7gia3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Butter/Area2D"]
+position = Vector2(-1, -12)
+shape = SubResource("RectangleShape2D_7flq2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1882, 63)
+scale = Vector2(16.75, 16.75)
+sprite_frames = SubResource("SpriteFrames_4v1u1")
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(0.955223, 0.656717)
+shape = SubResource("RectangleShape2D_sjete")

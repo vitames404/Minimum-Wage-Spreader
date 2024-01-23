@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkdbx4qkdw7wj"
-path="res://.godot/imported/morango1.png-abfe9cbf8fa7beac5c3e63e3ccf10629.ctex"
+uid="uid://5x8g0rhpdgir"
+path="res://.godot/imported/butter2.png-50e32fb590ca818d927f2809d3e20e25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/morango/morango1.png"
-dest_files=["res://.godot/imported/morango1.png-abfe9cbf8fa7beac5c3e63e3ccf10629.ctex"]
+source_file="res://Sprites/butter/butter2.png"
+dest_files=["res://.godot/imported/butter2.png-50e32fb590ca818d927f2809d3e20e25.ctex"]
 
 [params]
 
