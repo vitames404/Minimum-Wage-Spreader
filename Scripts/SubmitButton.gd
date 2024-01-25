@@ -59,12 +59,12 @@ func check_win():
 		else:
 			Global.lifes -= 1
 			print("Você perdeu uma vida")
-			if Global.lifes < 0:
+			if Global.lifes == 0:
 				get_tree().change_scene_to_file("res://GameOver.tscn")
 	else:
 		Global.lifes -= 1
 		print("Você perdeu uma vida")
-		if Global.lifes < 0:
+		if Global.lifes == 0:
 			get_tree().change_scene_to_file("res://GameOver.tscn")
 	
 	Global.level += 1
@@ -82,7 +82,6 @@ func check_win():
 	bread.free()
 	Global.drawingPoints.clear()
 	
-
 	if Global.level == 10:
 		print("Jogo terminado você zerou!")
 

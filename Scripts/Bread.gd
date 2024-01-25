@@ -66,10 +66,10 @@ func _draw():
 	for entry in Global.drawingPoints:
 		draw_rect(entry["position"], entry["color"], 1.0)
 	
-	if len(Global.Bread) > 0:
-		for point in Global.Bread:
-			draw_rect(Rect2(point["position"].x, point["position"].y, 5, 5), Color.RED , 1.0)
-	#
+	#if len(Global.Bread) > 0:
+		#for point in Global.Bread:
+			#draw_rect(Rect2(point["position"].x, point["position"].y, 5, 5), Color.RED , 1.0)
+	##
 	
 func _input(event):
 	if event is InputEventMouseButton and mouse_inside and Global.whatColor != null:
@@ -83,7 +83,7 @@ func _input(event):
 func _process(delta):
 	if drawing:
 		var local_pos = to_local(get_viewport().get_mouse_position())
-		var entry = {"position": Rect2(local_pos.x - 15, local_pos.y - 15, 50, 50), "color": Global.whatColor}
+		var entry = {"position": Rect2(local_pos.x - 15, local_pos.y - 15, 50, 70), "color": Global.whatColor}
 		
 		if entry not in Global.drawingPoints:
 			Global.drawingPoints.append(entry)

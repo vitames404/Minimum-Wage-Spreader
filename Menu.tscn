@@ -1,9 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyhbs03ly2pid"]
-
-[ext_resource type="FontFile" uid="uid://bda73t8d46bwl" path="res://Font/sketchy.ttf" id="1_ly22w"]
+[gd_scene format=3 uid="uid://dyhbs03ly2pid"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -1920.0
@@ -14,15 +13,3 @@ layout_mode = 0
 offset_right = 1926.0
 offset_bottom = 1086.0
 color = Color(0, 0, 0, 1)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-clip_contents = false
-layout_mode = 0
-offset_left = 704.0
-offset_top = 505.0
-offset_right = 1231.0
-offset_bottom = 830.0
-theme_override_fonts/normal_font = ExtResource("1_ly22w")
-theme_override_font_sizes/normal_font_size = 200
-text = "PLAY"
-scroll_active = false
