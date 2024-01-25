@@ -2,9 +2,12 @@ extends Area2D
 
 @onready var customer = preload("res://Customer.tscn")
 
-var main_scene = get_tree().get_root()
+var main_scene
 
 var correctBread
+
+func _ready():
+	main_scene = get_tree().get_root()
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
@@ -55,20 +58,21 @@ func check_win():
 			print("Ganhou")
 		else:
 			Global.lifes -= 1
-			if Global.lifes <= 0:
+			print("Você perdeu uma vida")
+			if Global.lifes < 0:
 				get_tree().change_scene_to_file("res://GameOver.tscn")
 	else:
 		Global.lifes -= 1
-		if Global.lifes <= 0:
+		print("Você perdeu uma vida")
+		if Global.lifes < 0:
 			get_tree().change_scene_to_file("res://GameOver.tscn")
 	
 	Global.level += 1
-		
-	var check_customer = main_scene.get_node_or_null("client")
+	
+	var check_customer = main_scene.get_node_or_null("client")	
 	var bread = main_scene.get_node_or_null("bread")
 	
 	if(check_customer):
-		print("Cliente EXCLUIDO")
 		check_customer.free()
 		
 	var client = customer.instantiate()
@@ -78,7 +82,7 @@ func check_win():
 	bread.free()
 	Global.drawingPoints.clear()
 	
-	
+
 	if Global.level == 10:
 		print("Jogo terminado você zerou!")
 
