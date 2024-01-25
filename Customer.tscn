@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://rb6lpm87lmk"]
+
+[ext_resource type="Texture2D" uid="uid://b4aw7ua6jcuvk" path="res://Sprites/cliente/cliente1.png" id="1_3g3qh"]
+[ext_resource type="Script" path="res://Scripts/ClientSprite.gd" id="1_eyy2h"]
+[ext_resource type="Script" path="res://Scripts/SpritePaoClient.gd" id="3_vdja8"]
+
+[node name="Customer" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -1
+position = Vector2(462, 433)
+texture = ExtResource("1_3g3qh")
+script = ExtResource("1_eyy2h")
+
+[node name="SpritePaoClient" type="Sprite2D" parent="."]
+script = ExtResource("3_vdja8")

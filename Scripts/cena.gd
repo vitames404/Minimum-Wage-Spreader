@@ -1,7 +1,14 @@
 extends Node2D
 
+@onready var customer = preload("res://Customer.tscn")
+
 var whatBread
 var whatColor
+var level = 1
+
+var score = 10
+
+var lifes = 3
 
 var sprite : Sprite2D
 var drawn_texture : ImageTexture
@@ -27,11 +34,66 @@ var pao2 = [[1, 1, 1, 1, 1, 1],
 			[2, 2, 2, 1, 1, 1],
 			[2, 2, 2, 1, 1, 1]]
 			
+var pao3 = [[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1]]
+
+var pao4 = [[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1]]
+
+var pao5 = [[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1]]
+
+var pao6 = [[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1]]
+
+var pao7 = [[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1]]
+			
+var pao8 = [[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1]]
+
+var pao9 = [[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1]]
+
+var pao10 = [[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1],
+			[1, 1, 1, 1, 1, 1]]
+
 			
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	var main_scene = self
+	var client = customer.instantiate()
+	client.name = "client"
+	main_scene.add_child(client)
