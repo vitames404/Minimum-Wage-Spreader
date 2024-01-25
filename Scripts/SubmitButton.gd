@@ -2,6 +2,8 @@ extends Area2D
 
 @onready var customer = preload("res://Customer.tscn")
 
+var main_scene = get_tree().get_root()
+
 var correctBread
 
 func _input_event(viewport, event, shape_idx):
@@ -19,6 +21,15 @@ func check_win():
 						point["completed"] = true
 				if(point["color"] == 2):
 					if(drawnPoint["color"] == Color.MEDIUM_VIOLET_RED):
+						point["completed"] = true
+				if(point["color"] == 3):
+					if(drawnPoint["color"] == Color.PAPAYA_WHIP):
+						point["completed"] = true	
+				if(point["color"] == 4):
+					if(drawnPoint["color"] == Color.YELLOW):
+						point["completed"] = true	
+				if(point["color"] == 5):
+					if(drawnPoint["color"] == Color.RED):
 						point["completed"] = true	
 	
 	var ganhou = true
@@ -45,15 +56,13 @@ func check_win():
 		else:
 			Global.lifes -= 1
 			if Global.lifes <= 0:
-				print("Você perdeu")
+				get_tree().change_scene_to_file("res://GameOver.tscn")
 	else:
 		Global.lifes -= 1
 		if Global.lifes <= 0:
-			print("Você perdeu")
+			get_tree().change_scene_to_file("res://GameOver.tscn")
 	
 	Global.level += 1
-	
-	var main_scene = get_tree().get_root()
 		
 	var check_customer = main_scene.get_node_or_null("client")
 	var bread = main_scene.get_node_or_null("bread")

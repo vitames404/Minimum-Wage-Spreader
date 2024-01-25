@@ -48,8 +48,6 @@ func _ready():
 		
 		test = bread.position + bread.shape.size / 2
 		
-		print(test)
-		
 		var currentX = bread_start_pos.x
 		var currentY = bread_start_pos.y 
 		 
@@ -61,8 +59,8 @@ func _ready():
 				currentX += size_x
 			currentY += size_y
 		
-		for point in Global.Bread:
-			print(point["color"])
+		#for point in Global.Bread:
+			#print(point["color"])
 
 func _draw():
 	for entry in Global.drawingPoints:

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://rb6lpm87lmk"]
+[gd_scene load_steps=5 format=3 uid="uid://rb6lpm87lmk"]
 
 [ext_resource type="Texture2D" uid="uid://b4aw7ua6jcuvk" path="res://Sprites/cliente/cliente1.png" id="1_3g3qh"]
 [ext_resource type="Script" path="res://Scripts/ClientSprite.gd" id="1_eyy2h"]
 [ext_resource type="Script" path="res://Scripts/SpritePaoClient.gd" id="3_vdja8"]
+[ext_resource type="Texture2D" uid="uid://pv1ctnyodwki" path="res://Sprites/pedidos/pedido0.png" id="3_x6l0g"]
 
 [node name="Customer" type="Node2D"]
 
@@ -14,4 +15,6 @@ texture = ExtResource("1_3g3qh")
 script = ExtResource("1_eyy2h")
 
 [node name="SpritePaoClient" type="Sprite2D" parent="."]
+position = Vector2(692, 193)
+texture = ExtResource("3_x6l0g")
 script = ExtResource("3_vdja8")
