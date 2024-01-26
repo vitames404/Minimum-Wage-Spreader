@@ -4,6 +4,8 @@ extends Area2D
 
 var main_scene
 
+var count = 0
+
 var correctBread
 
 func _ready():
@@ -37,9 +39,13 @@ func check_win():
 	
 	var ganhou = true
 	
+	#for point in Global.Bread:
+		#if point["completed"] != true:
+			#ganhou = false
+			
 	for point in Global.Bread:
-		if point["completed"] != true:
-			ganhou = false
+		if point["completed"] == true:
+			count += 1
 	
 	match Global.level:
 		1:	correctBread = 1
@@ -52,6 +58,12 @@ func check_win():
 		8:  correctBread = 2
 		9:  correctBread = 2
 		10:  correctBread = 2
+	
+	print(count)
+	print(len(Global.Bread))
+	
+	if count <= (0.8 * len(Global.Bread)):
+		ganhou = false
 	
 	if ganhou:
 		if Global.whatBread == correctBread:
@@ -79,10 +91,10 @@ func check_win():
 	client.name = "client"
 	main_scene.add_child(client)
 	
+	count = 0
 	bread.free()
 	Global.drawingPoints.clear()
 	
 	if Global.level == 10:
 		print("Jogo terminado você zerou!")
-
 
