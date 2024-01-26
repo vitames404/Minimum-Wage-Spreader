@@ -62,7 +62,7 @@ func check_win():
 	print(count)
 	print(len(Global.Bread))
 	
-	if count <= (0.8 * len(Global.Bread)):
+	if count <= (0.6 * len(Global.Bread)):
 		ganhou = false
 	
 	if ganhou:
@@ -97,6 +97,6 @@ func check_win():
 	Global.drawingPoints.clear()
 	Global.Bread.clear()
 	
-	if Global.level == 10:
-		print("Jogo terminado você zerou!")
+	if Global.level > 10:
+		get_tree().change_scene_to_file("res://win.tscn")
 
