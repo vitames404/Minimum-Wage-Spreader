@@ -66,10 +66,10 @@ func _draw():
 	for entry in Global.drawingPoints:
 		draw_rect(entry["position"], entry["color"], 1.0)
 	
-	#if len(Global.Bread) > 0:
-		#for point in Global.Bread:
-			#draw_rect(Rect2(point["position"].x, point["position"].y, 5, 5), Color.RED , 1.0)
-	##
+	if len(Global.Bread) > 0:
+		for point in Global.Bread:
+			draw_rect(Rect2(point["position"].x, point["position"].y, 5, 5), Color.RED , 1.0)
+
 	
 func _input(event):
 	if event is InputEventMouseButton and mouse_inside and Global.whatColor != null:

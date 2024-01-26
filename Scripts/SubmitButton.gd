@@ -92,8 +92,10 @@ func check_win():
 	main_scene.add_child(client)
 	
 	count = 0
-	bread.free()
+	if bread:
+		bread.free()
 	Global.drawingPoints.clear()
+	Global.Bread.clear()
 	
 	if Global.level == 10:
 		print("Jogo terminado você zerou!")

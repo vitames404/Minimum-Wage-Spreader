@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://1kpk67ro08fi"]
+
+[ext_resource type="Script" path="res://Scripts/lifes.gd" id="1_td7r4"]
+[ext_resource type="Texture2D" uid="uid://cdiyliqawavoc" path="res://Sprites/vida/vida1.png" id="2_yqnvy"]
+
+[node name="Vida" type="Node2D"]
+script = ExtResource("1_td7r4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(573.5, 378)
+texture = ExtResource("2_yqnvy")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(827.5, 381)
+texture = ExtResource("2_yqnvy")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(698.5, 380)
+texture = ExtResource("2_yqnvy")
