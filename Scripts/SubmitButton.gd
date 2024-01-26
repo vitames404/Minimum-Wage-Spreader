@@ -62,7 +62,7 @@ func check_win():
 	print(count)
 	print(len(Global.Bread))
 	
-	if count <= (0.5 * len(Global.Bread)):
+	if count <= (0.6 * len(Global.Bread)):
 		ganhou = false
 	
 	if ganhou:
