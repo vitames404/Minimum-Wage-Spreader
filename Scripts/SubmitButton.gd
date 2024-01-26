@@ -25,19 +25,19 @@ func check_win():
 		for drawnPoint in Global.drawingPoints:
 			if(drawnPoint["position"].has_point(point["position"])):
 				if(point["color"] == 1):
-					if(drawnPoint["color"] == Color.SANDY_BROWN):
+					if(drawnPoint["color"] == Color(0.77, 0.61, 0.30, 1)):
 						point["completed"] = true
 				if(point["color"] == 2):
-					if(drawnPoint["color"] == Color.MEDIUM_VIOLET_RED):
+					if(drawnPoint["color"] == Color(0.81, 0.30, 0.45, 1)):
 						point["completed"] = true
 				if(point["color"] == 3):
-					if(drawnPoint["color"] == Color.PAPAYA_WHIP):
+					if(drawnPoint["color"] == Color(0.93, 0.91, 0.75, 1)):
 						point["completed"] = true	
 				if(point["color"] == 4):
-					if(drawnPoint["color"] == Color.YELLOW):
+					if(drawnPoint["color"] == Color(1, 0.88, 0.57, 1)):
 						point["completed"] = true	
 				if(point["color"] == 5):
-					if(drawnPoint["color"] == Color.RED):
+					if(drawnPoint["color"] == Color(0.93, 0.14, 0.16, 1)):
 						point["completed"] = true	
 	
 	var ganhou = true
