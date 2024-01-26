@@ -90,6 +90,8 @@ func _process(delta):
 
 func _on_mouse_entered():
 	mouse_inside = true
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		drawing = true
 
 func _on_mouse_exited():
 	mouse_inside = false

@@ -9,5 +9,5 @@ func _ready():
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			Global.whatColor = Color.PAPAYA_WHIP
+			Global.whatColor = Color(0.93, 0.91, 0.75, 1)
 			Input.set_custom_mouse_cursor(knife)

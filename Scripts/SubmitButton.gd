@@ -8,12 +8,15 @@ var count = 0
 
 var correctBread
 
+var knife = load("res://Sprites/faca/faca.png")
+
 func _ready():
 	main_scene = get_tree().get_root()
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			Input.set_custom_mouse_cursor(knife)
 			check_win()
 			
 func check_win():
@@ -50,13 +53,13 @@ func check_win():
 	match Global.level:
 		1:	correctBread = 1
 		2:  correctBread = 1
-		3:  correctBread = 1
-		4:  correctBread = 1
+		3:  correctBread = 2
+		4:  correctBread = 2
 		5:  correctBread = 1
 		6:  correctBread = 2
-		7:  correctBread = 2
+		7:  correctBread = 1
 		8:  correctBread = 2
-		9:  correctBread = 2
+		9:  correctBread = 1
 		10:  correctBread = 2
 	
 	print(count)

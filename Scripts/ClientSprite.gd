@@ -10,6 +10,8 @@ var cliente7 : Texture = preload("res://Sprites/cliente/cliente7.png")
 var cliente8 : Texture = preload("res://Sprites/cliente/cliente8.png")
 var cliente9 : Texture = preload("res://Sprites/cliente/cliente9.png")
 var cliente10 : Texture = preload("res://Sprites/cliente/cliente10.png")
+var cliente11 : Texture = preload("res://Sprites/cliente/cliente11.png")
+var cliente12 : Texture = preload("res://Sprites/cliente/cliente12.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -38,6 +40,10 @@ func _process(delta):
 			set_sprite_texture(cliente9)
 		10:
 			set_sprite_texture(cliente10)
+		11:
+			set_sprite_texture(cliente11)
+		12:
+			set_sprite_texture(cliente12)
 	
 func set_sprite_texture(texture: Texture) -> void:
 	# Set the sprite's texture
