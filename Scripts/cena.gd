@@ -7,6 +7,8 @@ var whatBread
 var whatColor
 var level = 1
 
+var whatKnife = 1
+
 var score = 10
 
 var lifes = 3
@@ -96,6 +98,9 @@ var pao10 = [[3, 3, 3, 3, 3, 3, 3],
 			
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	
 	var main_scene = self
 	var client = customer.instantiate()
 	client.name = "client"

@@ -27,4 +27,4 @@ window/size/initial_position_type=0
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/stretch/scale=0.5
-mouse_cursor/custom_image="res://Sprites/faca/faca.png"
+window/vsync/vsync_mode=0

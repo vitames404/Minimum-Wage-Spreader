@@ -94,7 +94,9 @@ func check_win():
 	client.name = "client"
 	main_scene.add_child(client)
 	
+	Global.whatKnife = 1
 	count = 0
+	
 	if bread:
 		bread.free()
 	Global.drawingPoints.clear()
